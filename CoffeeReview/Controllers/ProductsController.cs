@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CoffeeReview.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoffeeReview.Controllers
 {
     public class ProductsController : Controller
     {
-        public IActionResult Index()
+        public ViewResult Products(string name)
         {
-            return View();
+            var model = new CoffeeProducts();
+            model.Name = name;
+            return View(model);
         }
     }
 }

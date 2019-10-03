@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CoffeeReview.Models
+namespace CoffeeReview
 {
-    public class ProductModel
+    public class Coffee
     {
+        public Coffee(string brand, string kind)
+        {
+
+        }
     }
 }
