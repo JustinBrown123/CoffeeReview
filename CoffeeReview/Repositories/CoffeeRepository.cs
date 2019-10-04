@@ -32,12 +32,14 @@ namespace CoffeeReview.Repositories
          
         public IEnumerable<Coffee> GetAll()
         {
-            return coffeeDictionary AsEnumerable();
+            //return coffeeDictionary AsEnumerable();
+            return coffeeDictionary.Values.ToList();
         }
 
         public Coffee GetById(int id)
         {
-            return coffeeDictionary.Single(c => c.Id == id);
+            //return coffeeDictionary.Single(c => c.Id == id);
+            return coffeeDictionary.Values.ToList().Single(c => c.Id == id);
         }
 
 
