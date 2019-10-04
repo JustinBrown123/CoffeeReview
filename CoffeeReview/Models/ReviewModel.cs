@@ -24,17 +24,17 @@ namespace CoffeeReview.Models
 
         public ReviewModels(int Id, string Title, string ImageUrl, string ReviewCategory, string Content, string ReviewModels)
         {
-        Id = id;
+            Id = id;
 
-        Title = title;
+            Title = title;
 
-        ImageUrl = imageUrl;
+            ImageUrl = imageUrl;
 
-        ReviewCategory = reviewCategory;
+            ReviewCategory = reviewCategory;
 
-        Content = content;
+            Content = content;
 
-        ReviewModels = reviewModels;
+            ReviewModels = reviewModels;
 
         }
     }
