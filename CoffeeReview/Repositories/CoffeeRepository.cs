@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,25 +19,25 @@ namespace CoffeeReview.Repositories
         {
             Dictionary<int, Coffee> coffeeDictionary = new Dictionary<int, Coffee>();
 
-            coffeeDictionary.Add(1, new Coffee( "Cleveland Coffee", "Bright Side Blend", "happyhappy stuff"));
-
-
-
-                string brand, string kind, string description)
-        //    coffeeProducts.Add(new Coffee("Cleveland Coffee", "Bright Side Blend"));
-        //    coffeeProducts.Add(new Coffee("Cleveland Coffee", "Tanzanian Peaberry"));
-        //    coffeeProducts.Add(new Coffee("Rising Star", "Apo Cooperative"));
-        //    coffeeProducts.Add(new Coffee("Starbucks", "Komodo Dragon"));
-        //    coffeeProducts.Add(new Coffee("8 o Clock", "The Original"));
-        //    coffeeProducts.Add(new Coffee("Brioso", "Colombia Santa Barbara Estate"));
-        //    coffeeProducts.Add(new Coffee("8 o Clock", "Red Eye Roast"));
-        //    coffeeProducts.Add(new Coffee("Peets", "Costa Rica Peaberry"));
-        //    coffeeProducts.Add(new Coffee("Dunkin' Donuts", "Dunkin' Decaf"));
+            coffeeDictionary.Add(1, new Coffee(1, "Cleveland Coffee", "Bright Side Blend", "happyhappy stuff"));
+            coffeeDictionary.Add(2, new Coffee(2, "Cleveland Coffee", "Tanzanian Peaberry", "really good stuff"));
+            coffeeDictionary.Add(3, new Coffee(3, "Rising Star", "Apo Cooperative", "makes happy"));
+            coffeeDictionary.Add(4, new Coffee(4, "Starbucks", "Komodo Dragon", "happyhappy stuff"));
+            coffeeDictionary.Add(5, new Coffee(5, "8 O'Clock", "The Original", "great cheap coffee"));
+            coffeeDictionary.Add(6, new Coffee(6, "Brioso", "Bright Side Blend", "Pretty Solid"));
+            coffeeDictionary.Add(7, new Coffee(7, "8 O'Clock", "Red Eye Roast", "excellent for the cost"));
+            coffeeDictionary.Add(8, new Coffee(8, "Peets", "Costa Rica Peaberry", "Deliciousness"));
+            coffeeDictionary.Add(9, new Coffee(9, "Dunkin' Donuts", "Dunkin Decaf", "Horrible"));
         }
-
+         
         public IEnumerable<Coffee> GetAll()
         {
-            return coffeeDictionary;
+            return coffeeDictionary AsEnumerable();
+        }
+
+        public Coffee GetById(int id)
+        {
+            return coffeeDictionary.Single(c => c.Id == id);
         }
 
 

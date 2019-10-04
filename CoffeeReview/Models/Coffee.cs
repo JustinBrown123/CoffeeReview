@@ -7,7 +7,7 @@ namespace CoffeeReview
 {
     public class Coffee
     {
-        //public int Id { get; set; }
+        public int Id { get; set; }
 
         public string Brand { get; set; }
 
@@ -20,9 +20,9 @@ namespace CoffeeReview
 
         }
        
-        public Coffee(/*int id*//*,*/ string brand, string kind, string description)
+        public Coffee(int id, string brand, string kind, string description)
         {
-            //Id = id;
+            Id = id;
             Brand = brand;
             Kind = kind;
             Description = description;
