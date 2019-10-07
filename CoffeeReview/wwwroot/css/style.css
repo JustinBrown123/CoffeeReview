@@ -1,2 +1,41 @@
-﻿body {
+﻿*{
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.618em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/images/bg.png)
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background: #333;
+}
+
+nav a {
+        padding: 1em 2em;
+        text-decoration: none;
+        color: #fff;
+}
+
+nav a:hover {
+        background: #666;
+}
+
+footer {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background: #666;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
 }
