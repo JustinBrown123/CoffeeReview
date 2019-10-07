@@ -1,9 +1,16 @@
-﻿@model CoffeeReview.Models.CoffeeProducts
+﻿@model IEnumerable<CoffeeReview.Models.Coffee>
 @{
     ViewData["Title"] = "Products";
 }
 
 <!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
 
 <h2>Products</h2>
 
@@ -14,7 +21,7 @@
 
     <div id="coffees">
         <article>
-            <h3><a href="">@model</a></h3>
+            <h3><a href=""></a></h3>
             <img src="~/images/brightsideblend.jpg"/></img>
             <p></p>
 

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using CoffeeReview.Models;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Coffee.Models;
+
 
 namespace CoffeeReview.Repositories
 {
