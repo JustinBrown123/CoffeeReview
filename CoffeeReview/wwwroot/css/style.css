@@ -10,15 +10,32 @@ h2, h3 {
     padding: .5em;
 }
 
-#coffees {
+#coffees{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 1em;
-    min-width: 22em;
+
     padding: 1em;
    
 }
+
+    #coffees img {
+        max-width: 200px;
+        height: 200px;
+        box-sizing: border-box;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+#coffees img:hover {
+    transform: scale(1.5);
+}
+
+
+
+
 
 nav {
     position: fixed;
