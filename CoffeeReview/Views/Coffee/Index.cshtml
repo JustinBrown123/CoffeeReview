@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Products</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 </head>
 
 
@@ -20,9 +20,6 @@
             @foreach (var coffee in Model)
             {
             <article>
-                <span>@coffee.Brand</span>
-                <p> <span>@coffee.Kind</span></p>
-                <p>Review: <span>@coffee.Review</span></p>
 
                 <p><a href="/Coffee/Details/@coffee.Id"><span><img src="@coffee.ImageUrl" /></span></a></p>
 
