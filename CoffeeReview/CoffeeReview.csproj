@@ -14,4 +14,8 @@
     <None Include="wwwroot\css\style.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Reviews\" />
+  </ItemGroup>
+
 </Project>
