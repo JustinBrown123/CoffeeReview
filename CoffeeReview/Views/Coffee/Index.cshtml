@@ -4,7 +4,7 @@
 }
 
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8" />
     <title>Products</title>
@@ -14,65 +14,18 @@
 
 <h2>Products</h2>
 
-
-<section id="Coffee">
-    <h2>Coffees</h2>
-    <p></p>
-
-    <div id="coffees">
-        <article>
-            <h3><a href=""></a></h3>
-            <img src="~/images/brightsideblend.jpg"/></img>
-            <p></p>
-
-        </article>
-
-        <article>
-            <h3><a href="">Coffee2</a></h3>
-            <img src="~/images/tanzanianpeaberry.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee3</a></h3>
-            <img src="~/images/apocooperative.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee4</a></h3>
-            <img src="~/images/komododragon.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee5</a></h3>
-            <img src="~/images/theoriginal.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee6</a></h3>
-            <img src="~/images/colombiasantabarbara.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee7</a></h3>
-            <img src="~/images/redeyeroast.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee8</a></h3>
-            <img src="~/images/costaricapeaberry.jpg"></img>
-            <p></p>
-        </article>
-
-        <article>
-            <h3><a href="">Coffee9</a></h3>
-            <img src="~/images/dunkindecaf.jpg"></img>
-            <p></p>
-        </article>
-    </div>
-</section>
+<body>
+        <h2>Coffees</h2>
+        <div id="coffees">
+            @foreach (var coffee in Model)
+            {
+                <article>
+                    <h3><a href="">@coffee.Kind</a></h3>
+                    <img src="~/images/brightsideblend.jpg" />
+                    
+                    <p></p>
+                </article>
+            }
+        </div>
+</body>
+</html>
