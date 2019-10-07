@@ -19,11 +19,30 @@
         <div id="coffees">
             @foreach (var coffee in Model)
             {
+<<<<<<< HEAD
                 <article>
                     <img src="@coffee.ImageUrl" />
                     @*<img src="~/images/brightsideblend.jpg" />*@
                     <p></p>
                 </article>
+=======
+            <article>
+
+
+
+                <span>@coffee.Brand</span>
+                <p> <span>@coffee.Kind</span></p>
+                <p>Review: <span>@coffee.Review</span></p>
+
+                <p><a href="/Coffee/Details/@coffee.Id"><span><img src="@coffee.ImageUrl" /></span></a></p>
+
+            
+                <hr />
+
+
+
+            </article>
+>>>>>>> 8f6b869b5e3094c59cec8725a1f2c2ad31560fd8
             }
         </div>
 

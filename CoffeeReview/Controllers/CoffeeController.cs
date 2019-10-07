@@ -23,6 +23,12 @@ namespace CoffeeReview.Controllers
             return View(model);
         }
 
+        public ViewResult Details(int id)
+        {
+            var model = coffeeRepo.GetById(id);
+            return View(model);
+        }
+
 
     }
 }
