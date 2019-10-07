@@ -1,0 +1,33 @@
+﻿@model CoffeeReview.Models.Coffee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h3>@Model.Kind</h3>
+
+    <div id="coffees">
+            <article>
+                <span>@Model.Brand</span>
+                <p> <span>@Model.Kind</span></p>
+
+                <p><span><img src="@Model.ImageUrl" /></span></p>
+
+                <p>Review: <span>@Model.Review</span></p>
+
+                <hr />
+
+
+
+            </article>
+        
+    </div>
+</body>
+</html>
