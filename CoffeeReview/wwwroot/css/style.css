@@ -6,8 +6,20 @@
     padding: 0;
 }
 
+body {
+    background-image: url(/images/cof.jpg);
+    background-repeat: repeat-y;
+}
+
+body img {
+    max-height: 100%;
+    max-width: 100%
+}
+
 h2, h3 {
     padding: .5em;
+    color: #fff;
+    text-align: center;
 }
 
 #coffees{
@@ -27,12 +39,33 @@ h2, h3 {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        border: 1px solid #fff;
     }
 
 #coffees img:hover {
     transform: scale(1.5);
 }
 
+    #coffees article {
+        background: #333;
+    }
+
+@media screen and (max-width: 40em) {
+    #coffees {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1em;
+        width: 60vw;
+        min-width: 22em;
+        margin: 1em auto;
+    }
+}
+
+@media screen and (max-width: 25em) {
+    #coffees {
+        width: auto;
+        min-width: unset;
+    }
+}
 
 
 
@@ -61,7 +94,7 @@ nav a:hover {
 footer {
     margin-top: 2em;
     margin-bottom: 1em;
-    background: #666;
+    background: #333;
     color: #fff;
     padding: 1em 0;
     text-align: center;
