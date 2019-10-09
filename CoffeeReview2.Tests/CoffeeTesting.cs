@@ -5,8 +5,8 @@ namespace CoffeeReview2.Tests
 {
     public class SongRepositoryTests : IDisposable
     {
-        private CoffeeContext db;
-        private CoffeeRepository underTest;
+        private MusicContext db;
+        private SongRepository underTest;
 
         public SongRepositoryTests()
         {
