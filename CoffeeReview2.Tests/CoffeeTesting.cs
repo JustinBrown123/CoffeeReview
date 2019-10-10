@@ -105,50 +105,50 @@ namespace CoffeeReview2.Tests
             Assert.Equal(0, count);
         }
 
-        [Fact]
-        public void Create_Increases_Count()
-        {
-            underTest.Create(new Review() { Coffee = "Foo" });
+        //        [Fact]
+        //        public void Create_Increases_Count()
+        //        {
+        //            underTest.Create(new Review() { Coffee });
 
-            var count = underTest.Count();
-            Assert.Equal(1, count);
-        }
+        //            var count = underTest.Count();
+        //            Assert.Equal(1, count);
+        //        }
 
-        [Fact]
-        public void GetById_Returns_Created_Item()
-        {
-            var expectedReview = new Review() { Coffee = "Baby Review" };
-            underTest.Create(expectedReview);
+        //        [Fact]
+        //        public void GetById_Returns_Created_Item()
+        //        {
+        //            var expectedReview = new Review() { Coffee = "Baby Review" };
+        //            underTest.Create(expectedReview);
 
-            var result = underTest.GetById(expectedCoffee.Id);  // The Id was set by EF when we call Create above.
+        //            var result = underTest.GetById(expectedReview.Id);  // The Id was set by EF when we call Create above.
 
-            Assert.Equal(expectedReview.Coffee, result.Coffee);
-        }
+        //            Assert.Equal(expectedReview.Coffee, result.Coffee);
+        //        }
 
-        [Fact]
-        public void Delete_Reduces_Count()
-        {
-            var review = new Review() { Coffee = "Baby Review" };
-            underTest.Create(review);
+        //        [Fact]
+        //        public void Delete_Reduces_Count()
+        //        {
+        //            var review = new Review() { Coffee = "Baby Review" };
+        //            underTest.Create(review);
 
-            underTest.Delete(review);
-            var count = underTest.Count();
+        //            underTest.Delete(review);
+        //            var count = underTest.Count();
 
-            Assert.Equal(0, count);
-        }
+        //            Assert.Equal(0, count);
+        //        }
 
-        [Fact]
-        public void GetAll_Returns_All()
-        {
-            underTest.Create(new Review() { Coffee = "Baby Review" });
-            underTest.Create(new Review() { Coffee = "Never gonna give you up" });
+        //        [Fact]
+        //        public void GetAll_Returns_All()
+        //        {
+        //            underTest.Create(new Review() { Coffee = "Baby Review" });
+        //            underTest.Create(new Review() { Coffee = "Never gonna give you up" });
 
-            var all = underTest.GetAll();
+        //            var all = underTest.GetAll();
 
-            Assert.Equal(2, all.Count());
-        }
+        //            Assert.Equal(2, all.Count());
+        //        }
 
-        //Save or Update?
+        //        //Save or Update?
+        //    }
     }
-
 }
