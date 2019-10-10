@@ -25,86 +25,17 @@ namespace CoffeeReview
         {
 
             modelBuilder.Entity<Coffee>().HasData(
+                    new Coffee(1, "Cleveland Coffee", "Bright Side Blend", "happyhappy stuff", "/images/brightsideblend.jpg"),
+                    new Coffee(2, "Cleveland Coffee", "Tanzanian Peaberry", "really good stuff", "/images/tanzanianpeaberry.jpg"),
+                    new Coffee(3, "Rising Star", "Apo Cooperative", "makes happy", "/images/apocooperative.jpg"),
+                    new Coffee(4, "Starbucks", "Komodo Dragon", "happyhappy stuff", "/images/komododragon.jpg"),
+                    new Coffee(5, "8 O'Clock", "The Original", "great cheap coffee", "/images/theoriginal.jpg"),
+                    new Coffee(6, "Brioso", "Santa Barbara Estate", "Pretty Solid", "/images/colombiasantabarbara.jpg"),
+                    new Coffee(7, "8 O'Clock", "Red Eye Roast", "excellent for the cost", "/images/redeyeroast.jpg"),
+                    new Coffee(8, "Peets", "Costa Rica Peaberry", "Deliciousness", "/images/costaricapeaberry.jpg"),
+                    new Coffee(9, "Dunkin' Donuts", "Dunkin Decaf", "Horrible", "/images/dunkindecaf.jpg")
+                            );
 
-                new Coffee(1, "Cleveland Coffee", "Bright Side Blend", "happyhappy stuff", "/images/brightsideblend.jpg"),
-
-                new Coffee()
-                {
-                    Id = 2,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                },
-
-                new Coffee()
-                {
-                    Id = 3,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-                },
-                new Coffee()
-                {
-                    Id = 4,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                },
-                new Coffee()
-                {
-                    Id = 5,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                },
-                new Coffee()
-                {
-                    Id = 6,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                },
-                new Coffee()
-                {
-                    Id = 7,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                },
-                new Coffee()
-                {
-                    Id = 8,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                },
-                new Coffee()
-                {
-                    Id = 9,
-                    Brand = "",
-                    Kind = "",
-                    Description = "",
-                    ImageUrl = "",
-
-                }
- 
-
-
-
-            );
             base.OnModelCreating(modelBuilder);
         }
     }   
