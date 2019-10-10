@@ -23,9 +23,9 @@ namespace CoffeeReview
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
-            services.AddScoped<IRepository<Coffee>, CoffeeRepository>();
+            services.AddDbContext<CoffeeContext>();
+            services.AddScoped<Repository<Review>, ReviewRepository>();
+            services.AddScoped<Repository<Coffee>, CoffeeRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

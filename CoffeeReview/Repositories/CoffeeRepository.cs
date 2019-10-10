@@ -12,10 +12,7 @@ namespace CoffeeReview.Repositories
     {
         public CoffeeRepository(CoffeeContext context) : base(context)
         {
-            var myRepo = new Repository<Coffee>(db);
-            var coffee = myRepo.GetById(1);
-            coffee.Brand = 
-            myRepo.Save();
+
             // This ensures our base constructor gets run.
 
 

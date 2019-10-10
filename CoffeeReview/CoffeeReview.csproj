@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20191010151341_FirstMigration.cs" />
+    <Compile Remove="Migrations\20191010151341_FirstMigration.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Repositories\NewFile.txt" />
   </ItemGroup>
 
