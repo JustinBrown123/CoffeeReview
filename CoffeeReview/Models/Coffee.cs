@@ -16,6 +16,9 @@ namespace CoffeeReview.Models
         public string Description { get; set; }
 
         public string ImageUrl { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
+
         
 
         public Coffee()
