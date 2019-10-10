@@ -9,7 +9,8 @@ namespace CoffeeReview
 {
     public class CoffeeContext : DbContext
     {
-        public DbSet<Coffee> Coffees { get; set; }
+        public DbSet<Coffee> Coffee { get; set; }
+        public DbSet<Review> Review { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
