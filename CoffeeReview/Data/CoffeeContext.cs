@@ -36,7 +36,9 @@ namespace CoffeeReview
                     new Coffee(9, "Dunkin' Donuts", "Dunkin Decaf", "Horrible", "/images/dunkindecaf.jpg")
                             );
 
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Review>().HasData(
+                new Review()
+                );
         }
     }   
 }    
