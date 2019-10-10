@@ -1,4 +1,4 @@
-﻿@model CoffeeReview.Models.Review
+﻿@model CoffeeReview.Models.Coffee
 @{
     Layout = null;
 }
@@ -11,16 +11,16 @@
     <title>Details</title>
 </head>
 <body>
-    <h3>@Model.Coffee.Kind</h3>
+    <h3>@Model.Kind</h3>
 
     <div id="coffees">
             <article>
-                <span>@Model.Coffee.Brand</span>
-                <p> <span>@Model.Coffee.Kind</span></p>
+                <span>@Model.Brand</span>
+                <p> <span>@Model.Kind</span></p>
 
-                <p><span><img src="@Model.Coffee.ImageUrl" /></span></p>
+                <p><span><img src="@Model.ImageUrl" /></span></p>
 
-                <p>Description: <span>@Model.Coffee.Description</span></p>
+                <p>Description: <span>@Model.Description</span></p>
 
                 <hr />
 

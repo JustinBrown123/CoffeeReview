@@ -24,8 +24,8 @@ namespace CoffeeReview
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
             services.AddDbContext<CoffeeContext>();
-            services.AddScoped<Repository<Review>, ReviewRepository>();
-            services.AddScoped<Repository<Coffee>, CoffeeRepository>();
+            services.AddScoped<IRepository<Review>, ReviewRepository>();
+            services.AddScoped<IRepository<Coffee>, CoffeeRepository>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CoffeeReview.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CoffeeReview
 {
-    public class Repository<T>
+    public class Repository<T> : IRepository<T>
          where T : class
     {
         private DbContext db;
