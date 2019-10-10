@@ -37,7 +37,7 @@ namespace CoffeeReview
                             );
 
             modelBuilder.Entity<Review>().HasData(
-                new Review()
+                new Review(1, "Splendid, I must say. Gracious upon the first sip jolly ole chaps.")
                 );
         }
     }   
