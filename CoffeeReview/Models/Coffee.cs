@@ -15,23 +15,24 @@ namespace CoffeeReview.Models
 
         public string Description { get; set; }
 
-        public string Review { get; set; }
-
         public string ImageUrl { get; set; }
+
+        public virtual ICollection<Review> Reviews { get; set; }
+
+        
 
         public Coffee()
         {
 
         }
        
-        public Coffee(int id, string brand, string kind, string review, string imageUrl)
+        public Coffee(int id, string brand, string kind, string description, string imageUrl)
         {
             Id = id;
             Brand = brand;
             Kind = kind;
-            Review = review;
+            Description = description;
             ImageUrl = imageUrl;
-
         }
     }
 }

@@ -15,19 +15,32 @@
     <h3>@Model.Kind</h3>
 
     <div id="coffees">
-            <article>
-                <span>@Model.Brand</span>
-                <p> <span>@Model.Kind</span></p>
+        <article>
+            <span>@Model.Brand</span>
+            <p> <span>@Model.Kind</span></p>
 
-                <p><span><img src="@Model.ImageUrl" /></span></p>
+            <p><span><img src="@Model.ImageUrl" /></span></p>
 
-                <p>Review: <span>@Model.Review</span></p>
+            <p>Description:<span>@Model.Description</span></p>
+            <div id="review">
+                @foreach (var review in Model.Reviews)
+                {
+                    <article>
 
+                        
+                        <hr />
+
+                        <p>@review.Content</p>
+
+                    </article>
+                }
+            </div>
+               
                 <hr />
 
 
 
-            </article>
+</article>
         
     </div>
 </body>
