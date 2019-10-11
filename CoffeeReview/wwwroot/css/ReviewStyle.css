@@ -1,0 +1,15 @@
+﻿body {
+}
+
+#review {
+    background: #e4c271;
+}
+
+#description {
+    background: #705643;
+}
+
+img {
+    max-height: 400px;
+    max-width: 400px;
+}

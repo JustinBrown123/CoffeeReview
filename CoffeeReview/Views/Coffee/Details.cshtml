@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>Details</title>
     <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link href="~/css/ReviewStyle.css" rel="stylesheet" />
 </head>
 <body>
     <h3>@Model.Kind</h3>
@@ -21,7 +22,7 @@
 
             <p><span><img src="@Model.ImageUrl" /></span></p>
 
-            <p>Description:<span>@Model.Description</span></p>
+            <p id="description">Description:<span>@Model.Description</span></p>
             <div id="review">
                 @foreach (var review in Model.Reviews)
                 {
