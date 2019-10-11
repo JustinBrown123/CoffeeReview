@@ -9,7 +9,7 @@
     background: #705643;
 }
 
-img {
-    max-height: 400px;
-    max-width: 400px;
+#coffees img {
+    height: 400px;
+    width: 400px;
 }
