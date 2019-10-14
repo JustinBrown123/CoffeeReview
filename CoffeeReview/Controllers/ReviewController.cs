@@ -43,9 +43,9 @@ namespace CoffeeReview.Controllers
         }
 
         [HttpGet]
-        public ViewResult CreateByReviewId(int id)
+        public ViewResult CreateByCoffeeId(int id)
         {
-            ViewBag.ReviewId = id;
+            ViewBag.CoffeeId = id;
             return View();
         }
 
