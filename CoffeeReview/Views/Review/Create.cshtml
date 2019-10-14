@@ -15,7 +15,7 @@
 </head>
 <body>
 
-    <h4>Review</h4>
+    <h4>Write a Review!</h4>
     <hr />
     <div class="row">
         <div class="col-md-4">
@@ -27,8 +27,9 @@
                     <span asp-validation-for="Content" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="CoffeeId" class="control-label"></label>
-                    <select asp-for="CoffeeId" class="form-control" asp-items="ViewBag.CoffeeId"></select>
+                    @*<label asp-for="CoffeeId" class="control-label"></label>*@
+                    @*<select asp-for="CoffeeId" class="form-control" asp-items="ViewBag.CoffeeId"></select>*@
+                    <input type="hidden" name ="Brand" value="@ViewBag.CoffeeId"/>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-default" />
@@ -38,7 +39,7 @@
     </div>
 
     <div>
-        <a asp-action="Index">Back to List</a>
+        @*<a asp-action="Coffee/Index/@Model.CoffeeId">Back to Coffees</a>*@
     </div>
 
     @section Scripts {
