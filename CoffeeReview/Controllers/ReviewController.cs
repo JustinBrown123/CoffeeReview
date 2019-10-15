@@ -23,6 +23,8 @@ namespace CoffeeReview.Controllers
             return View(model);
         }
 
+       
+
         public ViewResult Details(int id)
         {
             var model = reviewRepo.GetById(id);
@@ -39,7 +41,7 @@ namespace CoffeeReview.Controllers
         public ActionResult Create(Review review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("/Views/Review/Index");
+            return RedirectToAction("Details", "Coffee", new {id = review.CoffeeId });
         }
 
 
