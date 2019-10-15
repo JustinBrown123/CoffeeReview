@@ -39,8 +39,10 @@ namespace CoffeeReview.Controllers
         public ActionResult Create(Review review)
         {
             reviewRepo.Create(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("/Views/Review/Index");
         }
+
+
 
         [HttpGet]
         public ViewResult CreateByCoffeeId(int id)
