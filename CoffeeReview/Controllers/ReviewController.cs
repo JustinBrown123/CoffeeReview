@@ -68,7 +68,19 @@ namespace CoffeeReview.Controllers
         }
 
 
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            var model = reviewRepo.GetById(id);
+            return View(model);
+        }
 
+        [HttpPost]
+        public ActionResult Update(Review review)
+        {
+            reviewRepo.Update(review);
+            return RedirectToAction("Details", "Coffee", new { id = review.CoffeeId });
+        }
 
     }
     
