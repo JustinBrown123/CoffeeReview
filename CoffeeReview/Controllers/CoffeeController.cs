@@ -29,6 +29,20 @@ namespace CoffeeReview.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult Delete(Review review)
+        {
+            reviewRepo.Delete(review);
+            return RedirectToAction("Delete", "Review", g);
+        }
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = reviewRepo.GetById(id);
+            return View(model);
+        }
+
 
     }
 }

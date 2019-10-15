@@ -33,6 +33,13 @@
 
                         <p>@review.Content</p>
 
+                        <input type="submit" value="Delete" class="btn btn-default" />
+                        <form action="/Review/Delete/@review.Id"
+                              method="post">
+                            <a href="/Course/Delete/@review.Id"><i class="fas fa-trash-alt"></i></a>
+                            value="Delete Review"/>
+                        </form>
+
                     </article>
                 }
             </div>
@@ -40,7 +47,7 @@
         </article>
 
     </div>
-    <p><a href="/Review/CreateByCoffeeId/@Model.Id">Add a Review</a></p>
+    <p><a href="/Review/CreateByCoffeeId/@Model.Id"><input type="submit" value="Write a Review" class="btn btn-default" /></a></p>
     <nav>
         <a href="/Coffee/Index">Coffees</a>
     </nav>
