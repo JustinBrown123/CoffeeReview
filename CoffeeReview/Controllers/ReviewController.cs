@@ -54,17 +54,17 @@ namespace CoffeeReview.Controllers
         }
 
         [HttpGet]
-        public ViewResult Delete(int id)
+        public ViewResult DeleteByCoffeeId(int id)
         {
             var model = reviewRepo.GetById(id);
-            return View(model);
+            return View();
         }
 
         [HttpPost]
         public ActionResult Delete(Review review)
         {
             reviewRepo.Delete(review);
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Coffee", new { id = review.CoffeeId });
         }
 
 

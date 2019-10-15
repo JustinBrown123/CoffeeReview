@@ -1,4 +1,6 @@
-﻿@*@model CoffeeReview.Models.Review
+﻿@model CoffeeReview.Models.Review
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 
 @{
     ViewData["Title"] = "DeleteByCoffeeId";
@@ -11,35 +13,23 @@
     <h4>Review</h4>
     <hr />
     <dl class="dl-horizontal">
-        @foreach (var review in Model.)
-        {
-            <article>
-
-
-                <hr />
-
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.Content)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Content)
-                </dd>
-                <dt>
-                    @Html.DisplayNameFor(model => model.Coffee)
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Coffee.Id)
-                </dd>
-                <p>@review.Content</p>
-
-            </article>
-        }
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Coffee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Coffee.Id)
+        </dd>
     </dl>
-    
+
     <form asp-action="DeleteByCoffeeId">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>
-</div>*@
+</div>

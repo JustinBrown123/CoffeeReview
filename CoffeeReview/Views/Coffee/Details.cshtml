@@ -26,21 +26,18 @@
             <div id="review">
                 @foreach (var review in Model.Reviews)
                 {
-                    <article>
+                <article>
 
 
-                        <hr />
+                    <hr />
 
-                        <p>@review.Content</p>
+                    <p>@review.Content</p>
 
-                        <input type="submit" value="Delete" class="btn btn-default" />
-                        <form action="/Review/Delete/@review.Id"
-                              method="post">
-                            <a href="/Course/Delete/@review.Id"><i class="fas fa-trash-alt"></i></a>
-                            value="Delete Review"/>
-                        </form>
 
-                    </article>
+                    <p><a href="/Review/DeleteByCoffeeId/@review.Id"><input type="submit" value="delete a Review" class="btn btn-default" /></a></p>
+
+
+                </article>
                 }
             </div>
             <hr />
@@ -48,6 +45,7 @@
 
     </div>
     <p><a href="/Review/CreateByCoffeeId/@Model.Id"><input type="submit" value="Write a Review" class="btn btn-default" /></a></p>
+
     <nav>
         <a href="/Coffee/Index">Coffees</a>
     </nav>
