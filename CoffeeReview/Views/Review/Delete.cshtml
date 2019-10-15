@@ -3,10 +3,10 @@
 
 
 @{
-    ViewData["Title"] = "DeleteByCoffeeId";
+    ViewData["Title"] = "Delete";
 }
 
-<h2>DeleteByCoffeeId</h2>
+<h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -27,8 +27,9 @@
         </dd>
     </dl>
 
-    <form asp-action="DeleteByCoffeeId">
+    <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CoffeeId" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
         <a asp-action="Index">Back to List</a>
     </form>

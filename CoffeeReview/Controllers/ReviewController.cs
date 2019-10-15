@@ -54,10 +54,10 @@ namespace CoffeeReview.Controllers
         }
 
         [HttpGet]
-        public ViewResult DeleteByCoffeeId(int id)
+        public ViewResult Delete(int id)
         {
             var model = reviewRepo.GetById(id);
-            return View();
+            return View(model);
         }
 
         [HttpPost]
