@@ -42,6 +42,33 @@ namespace CoffeeReview.Controllers
         //    var model = reviewRepo.GetById(id);
         //    return View(model);
         //}
+        [HttpGet]
+        public ViewResult AddACoffee(int id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Coffee coffee)
+        {
+            coffeeRepo.Create(coffee);
+            return RedirectToAction("Index", "Coffee");
+        }
+
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var model = coffeeRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Coffee coffee)
+        {
+            coffeeRepo.Delete(coffee);
+            return RedirectToAction("Index", "Coffee");
+        }
 
 
     }
