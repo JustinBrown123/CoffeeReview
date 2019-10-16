@@ -1,28 +1,25 @@
-using NUnit.Framework;
-using NSubstitute;
-using CoffeeReview;
-using CoffeeReview.Repositories;
-using CoffeeReview.Controllers;
+﻿using CoffeeReview.Controllers;
 using CoffeeReview.Models;
+using CoffeeReview.Repositories;
+using NSubstitute;
+using System;
 using System.Collections.Generic;
+using System.Text;
+using Xunit;
 
-namespace ControllerTests
+namespace CoffeeReview.Tests
 {
-    public class ControllerTests
+    public class CoffeeControllerTests
     {
-        private IEnumerable<Coffee> expectedCoffees;
 
-      
-
-        [Test]
+        [Fact]
         public void GetAll_Returns_All_Reviews()
         {
             CoffeeRepository = Substitute.For<IRepository<Coffee>>();
-           
+
             underTest = new CoffeeController(CoffeeRepository);
 
             CoffeeRepository.GetAll().Returns(expectedCoffees);
-            Assert.Pass();
         }
     }
 }
