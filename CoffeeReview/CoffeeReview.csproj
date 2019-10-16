@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.1" />
@@ -25,14 +26,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.LiveShare" Version="1.1.57" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="NSubstitute" Version="4.2.1" />
+    <PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.10" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\css\style.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Reviews\" />
   </ItemGroup>
 
 </Project>
