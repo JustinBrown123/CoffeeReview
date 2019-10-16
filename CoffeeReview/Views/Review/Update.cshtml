@@ -3,35 +3,43 @@
 @{
     ViewData["Title"] = "Update";
 }
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete a review</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link href="~/css/CRUDStyle.css" rel="stylesheet" />
+</head>
 
-<h2>Update</h2>
+<h3>Update</h3>
 
-<h4>Review</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Update">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Content" class="control-label"></label>
-                <input asp-for="Content" class="form-control" />
-                <span asp-validation-for="Content" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                @*<label asp-for="CoffeeId" class="control-label"></label>
-                <select asp-for="CoffeeId" class="form-control" asp-items="ViewBag.CoffeeId"></select>
-                <span asp-validation-for="CoffeeId" class="text-danger"></span>*@
-                <input type="hidden" name="CoffeeId" value="@ViewBag.CoffeeId" />
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Update" class="btn btn-default" />
-            </div>
-        </form>
+<div class="box">
+    <h4>Review</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Update">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <input asp-for="Content" class="form-control" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    @*<label asp-for="CoffeeId" class="control-label"></label>
+                        <select asp-for="CoffeeId" class="form-control" asp-items="ViewBag.CoffeeId"></select>
+                        <span asp-validation-for="CoffeeId" class="text-danger"></span>*@
+                    <input type="hidden" name="CoffeeId" value="@ViewBag.CoffeeId" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
+<div class="box">
     <a asp-action="Coffee/Index/">Back to List</a>
 </div>
 
