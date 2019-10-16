@@ -13,38 +13,76 @@
     <link href="~/css/ReviewStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <h3>@Model.Kind</h3>
+    @*<h3>@Model.Kind</h3>*@
 
-    <div id="coffees">
+    <div id="coffeereview">
         <article>
-            <span>@Model.Brand</span>
-            <p> <span>@Model.Kind</span></p>
+            <div id="topname">
+                <span>@Model.Brand</span>
+                <p> <span>@Model.Kind</span></p>
+            </div>
+
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+
 
             <p><span><img src="@Model.ImageUrl" /></span></p>
 
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+
+
             <p id="description">Description:<span>@Model.Description</span></p>
+
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+            <hr />
+
+
             <div id="review">
                 @foreach (var review in Model.Reviews)
                 {
-                <article>
+                    <article>
 
 
-                    <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
+                        <hr />
 
-                    <p>@review.Content</p>
+
+                        <p>@review.Content</p>
 
 
-                    <p><a href="/Review/Delete/@review.Id"><input type="submit" value="Delete a Review" class="btn btn-default" /></a></p>
-                    <p><a href="/Review/Update/@review.Id"><input type="submit" value="Update a Review" class="btn btn-default" /></a></p>
+                        <p><a class="butn" href="/Review/Delete/@review.Id"><input type="submit" value="Delete a Review" class="btn btn-default" /></a></p>
+                        <p><a class="butn" href="/Review/Update/@review.Id"><input type="submit" value="Update a Review" class="btn btn-default" /></a></p>
 
-                </article>
+                    </article>
                 }
             </div>
             <hr />
         </article>
 
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+        <hr />
+
+        <div id="writereview">
+            <p><a class="butn" href="/Review/CreateByCoffeeId/@Model.Id"><input type="submit" value="Write a Review" class="btn btn-default" /></a></p>
+        </div>
     </div>
-    <p><a href="/Review/CreateByCoffeeId/@Model.Id"><input type="submit" value="Write a Review" class="btn btn-default" /></a></p>
+
 
     <nav>
         <a href="/Coffee/Index">Coffees</a>
