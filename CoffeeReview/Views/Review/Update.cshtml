@@ -22,7 +22,7 @@
                 @*<label asp-for="CoffeeId" class="control-label"></label>
                 <select asp-for="CoffeeId" class="form-control" asp-items="ViewBag.CoffeeId"></select>
                 <span asp-validation-for="CoffeeId" class="text-danger"></span>*@
-                <input type="hidden" name="CoffeeId" value="@ViewBag.CoffeeId" />
+                <input type="hidden" name="CoffeeId" value="@Model.CoffeeId" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Update" class="btn btn-default" />
