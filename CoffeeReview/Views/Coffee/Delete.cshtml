@@ -19,18 +19,21 @@
     <h3>Choose a Coffee To Delete</h3>
     <h2>Coffees</h2>
     <div id="coffees">
+        <form action="/Coffee/DeleteById/" method="post">
+
+            <select name="Id">
+                @foreach (var coffee in Model)
+                {
 
 
-        <select id="c">
-            @foreach (var coffee in Model)
-            {
+                    <option value="@coffee.Id">@coffee.Brand, @coffee.Kind</option>
+
+                }
+            </select>
+            <input type="submit" value="Delete a Coffee" class="btn btn-default" />
+        </form>
 
 
-                <option value="coffee.Id">@coffee.Brand, @coffee.Kind</option>
-
-            }
-        </select>
-        <a href="/Coffee/DeleteById/@coffee.Id"><input type="submit" value="Delete a Coffee" class="btn btn-default" /></a>
 
 
     </div>

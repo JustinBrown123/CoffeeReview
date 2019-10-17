@@ -43,9 +43,8 @@ namespace CoffeeReview.Controllers
         //    return View(model);
         //}
         [HttpGet]
-        public ViewResult AddACoffee(int id)
+        public ViewResult AddACoffee()
         {
-            ViewBag.Id = id;
             return View();
         }
         [HttpPost]
@@ -64,7 +63,7 @@ namespace CoffeeReview.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteById( int id)
+        public ActionResult DeleteById(int id)
         {
             var coffee = coffeeRepo.GetById(id);
             coffeeRepo.Delete(coffee);
