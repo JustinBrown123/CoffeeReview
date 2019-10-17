@@ -1,4 +1,4 @@
-﻿@model CoffeeReview.Models.Review
+@model CoffeeReview.Models.Review
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Update";
@@ -11,13 +11,6 @@
 </head>
 
 <h3>Update</h3>
-
-<div class="box">
-    <nav>
-        <a href="/Home/Index">Home</a>
-        <a href="/Coffee/Index">Coffees</a>
-    </nav>
-
     <h4>Review</h4>
     <hr />
     <div class="row">
@@ -43,10 +36,11 @@
         </div>
     </div>
 </div>
-
 <div class="box">
-    <a asp-action="Coffee/Index/">Back to List</a>
-</div>
+    <nav>
+        <a href="/Home/Index">Home</a>
+        <a href="/Coffee/Index">Coffees</a>
+    </nav>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
