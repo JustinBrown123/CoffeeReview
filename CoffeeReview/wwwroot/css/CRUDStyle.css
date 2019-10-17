@@ -1,0 +1,17 @@
+﻿.box {
+    margin-top: 40%;
+    margin-left: 40%;
+    margin-right: 40%;
+    background: #e4c271;
+    width: 200px;
+    text-align: center;
+}
+
+h3, h4{
+    color: #000;
+}
+
+input {
+    width: 200px;
+    height: 100px;
+}
