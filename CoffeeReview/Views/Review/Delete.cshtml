@@ -25,16 +25,16 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Content)
+            <input type="hidden"@Html.DisplayNameFor(model => model.Content)>
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Content)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Coffee)
+           <input type="hidden"@Html.DisplayNameFor(model => model.Coffee)>
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Coffee.Id)
+            <input type="hidden"@Html.DisplayFor(model => model.Coffee.Id)>
         </dd>
     </dl>
 

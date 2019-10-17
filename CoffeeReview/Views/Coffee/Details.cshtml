@@ -50,8 +50,10 @@
             <div id="review">
                 @foreach (var review in Model.Reviews)
                 {
-                <article>
+                    <article>
 
+
+                        <hr />
 
                     <hr />
                     <hr />
@@ -60,8 +62,12 @@
                     <hr />
 
 
-                    <p>@review.Content</p>
 
+                        <p>@review.Content</p>
+
+
+                   <p><a href="/Review/Delete/@review.Id"><input type="submit" value="Delete a Review" class="btn btn-default" /></a></p>
+                        <p><a href="/Review/Update/@review.Id"><input type="submit" value="Update a Review" class="btn btn-default" /></a></p>
 
                     <p><a class="butn" href="/Review/Delete/@review.Id"><input type="submit" value="Delete Review" class="btn btn-default" /></a></p>
                     <p><a class="butn" href="/Review/Update/@review.Id"><input type="submit" value="Update Review" class="btn btn-default" /></a></p>
@@ -72,7 +78,8 @@
                     <hr />
                     <hr />
 
-                </article>
+
+                    </article>
                 }
             </div>
             <hr />
@@ -88,6 +95,12 @@
             <p><a class="butn" href="/Review/CreateByCoffeeId/@Model.Id"><input type="submit" value="Write a Review" class="btn btn-default" /></a></p>
         </div>
     </div>
+
+    <p><a href="/Review/CreateByCoffeeId/@Model.Id"><input type="submit" value="Write a Review" class="btn btn-default" /></a></p>
+    <p><a href="/Coffee/AddACoffee/"><input type="submit" value="Make a Coffee" class="btn btn-default" /></a></p>
+    <p><a href="/Coffee/Delete/"><input type="submit" value="Delete a Coffee" class="btn btn-default" /></a></p>
+
+
 
 
     <nav>
