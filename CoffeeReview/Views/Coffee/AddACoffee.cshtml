@@ -18,7 +18,7 @@
     <hr />
     <div class="row">
         <div class="col-md-4">
-            <form asp-action="AddACoffee" method="post">
+            <form asp-action="Create" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Brand" class="control-label">What Brand of Coffee?</label>
@@ -39,6 +39,7 @@
                     <label asp-for="ImageUrl" class="control-label">Enter a Image Url</label>
                     <input asp-for="ImageUrl" class="form-control" />
                     <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input type="hidden" name="Id" value="@ViewBag.Id" />
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-default" />

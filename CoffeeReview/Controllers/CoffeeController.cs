@@ -57,18 +57,22 @@ namespace CoffeeReview.Controllers
 
 
         [HttpGet]
-        public ViewResult Delete(int id)
+        public ViewResult Delete()
         {
-            var model = coffeeRepo.GetById(id);
+            var model = coffeeRepo.GetAll();
             return View(model);
         }
 
         [HttpPost]
-        public ActionResult Delete(Coffee coffee)
+        public ActionResult DeleteById( int id)
         {
+            var coffee = coffeeRepo.GetById(id);
             coffeeRepo.Delete(coffee);
             return RedirectToAction("Index", "Coffee");
         }
+
+
+
 
 
     }
