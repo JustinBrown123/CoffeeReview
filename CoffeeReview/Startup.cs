@@ -44,7 +44,7 @@ namespace CoffeeReview
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Coffee}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
