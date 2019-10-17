@@ -12,10 +12,19 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Delete</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link href="~/css/CRUDStyle.css" rel="stylesheet" />
 </head>
 <body>
 
+    <nav>
+        <a href="/Home/Index">Home</a>
+        <a href="/Coffee/Index">Coffees</a>
+        <a href="/Coffee/AddACoffee">Add a Coffee</a>
+        <a href="/Coffee/Delete">Delete a Coffee</a>
+    </nav>
 
+<div class="box">
     <h3>Choose a Coffee To Delete</h3>
     <h2>Coffees</h2>
     <div id="coffees">
@@ -33,51 +42,7 @@
             <input type="submit" value="Delete a Coffee" class="btn btn-default" />
         </form>
 
-
-
-
     </div>
-    <div>
-        @*<h4>Coffee</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <div class="form-group">
-                <label asp-for="Kind" class="control-label"></label>
-                <input asp-for="Kind" class="form-control" />
-                <span asp-validation-for="Kind" class="text-danger"></span>
-            </div>
-            <dt>
-                @Html.DisplayNameFor(model => model.Brand)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Brand)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Kind)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Kind)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Description)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.Description)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.ImageUrl)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.ImageUrl)
-            </dd>
-        </dl>
-
-
-        <form asp-action="Delete">
-            <input type="hidden" asp-for="Id" />
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-action="Index">Back to List</a>
-        </form>*@
-    </div>
+ </div>
 </body>
 </html>
