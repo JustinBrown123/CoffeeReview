@@ -1,4 +1,4 @@
-﻿
+﻿@model CoffeeReview.Models.Coffee
 @{
     Layout = null;
 }
@@ -8,13 +8,50 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CoffeeReview</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <link href="~/css/HomeStyle.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <nav>
+        <a href="/Home/Index">Home</a>
+        <a href="/Coffee/Index">Coffees</a>
+    </nav>
 
-    <footer>© 2019 CoffeeReview</footer>
+    <div id="container">
+
+        <div class="header">
+            <h4>Daily Brew</h4>
+        </div>
+
+
+        <div id="imgbox">
+            <img src="/images/komododragon.jpg" />
+        </div>
+
+        <div class="header">
+            <h4>Brewd Review</h4>
+        </div>
+
+        <div id="reviews">
+            <p>
+                Justin review:
+            </p>
+            <p>
+                James review:
+            </p>
+            <p>
+                Bryan review:
+            </p>
+            <p>
+                Andy review:
+            </p>
+        </div>
+
+
+    </div>
+
+    <footer>© 2019 Brewdz</footer>
 </body>
 
 </html>
