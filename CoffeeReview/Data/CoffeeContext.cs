@@ -26,15 +26,15 @@ namespace CoffeeReview
         {
 
             modelBuilder.Entity<Coffee>().HasData(
-                    new Coffee(1, "Cleveland Coffee", "Bright Side Blend", "happyhappy stuff", "/images/brightsideblend.jpg"),
-                    new Coffee(2, "Cleveland Coffee", "Tanzanian Peaberry", "really good stuff", "/images/tanzanianpeaberry.jpg"),
-                    new Coffee(3, "Rising Star", "Apo Cooperative", "makes happy", "/images/apocooperative.jpg"),
-                    new Coffee(4, "Starbucks", "Komodo Dragon", "happyhappy stuff", "/images/komododragon.jpg"),
-                    new Coffee(5, "8 O'Clock", "The Original", "great cheap coffee", "/images/theoriginal.jpg"),
-                    new Coffee(6, "Brioso", "Santa Barbara Estate", "Pretty Solid", "/images/colombiasantabarbara.jpg"),
-                    new Coffee(7, "8 O'Clock", "Red Eye Roast", "excellent for the cost", "/images/redeyeroast.jpg"),
-                    new Coffee(8, "Peets", "Costa Rica Peaberry", "Deliciousness", "/images/costaricapeaberry.jpg"),
-                    new Coffee(9, "Dunkin' Donuts", "Dunkin Decaf", "Horrible", "/images/dunkindecaf.jpg")
+                    new Coffee(1, "Cleveland Coffee", "Bright Side Blend", "Light to medium Roast Costa Rican and Dark roast Hondauran. Organic, Fair Trade, Shade Grown Balanced acidity, clean flavorful cup", "/images/brightsideblend.jpg"),
+                    new Coffee(2, "Cleveland Coffee", "Tanzanian Peaberry", "Full Medium Roast Specialty Grade Crisp, Citrus tones, Nice Finish", " /images/tanzanianpeaberry.jpg"),
+                    new Coffee(3, "Rising Star", "Apo Cooperative", "Eastern Highlands, Papua New Guinea. Notes of: plum, blood orange, chocolate malt. ", "/images/apocooperative.jpg"),
+                    new Coffee(4, "Starbucks", "Komodo Dragon", "Region: Asia-Pacific. Notes of Cedary Spice and Herbs.  ", "/images/komododragon.jpg"),
+                    new Coffee(5, "8 O'Clock", "The Original", "Medium Roast. Sweet, fruity and well balanced", "/images/theoriginal.jpg"),
+                    new Coffee(6, "Brioso", "Santa Barbara Estate", "San Pascual Columbian. Notes of Fruit punch and creamy mouthfeel", "/images/colombiasantabarbara.jpg"),
+                    new Coffee(7, "8 O'Clock", "Red Eye Roast", "Dark Roast. Espresso Style, Smooth, Full-Bodied","/images/redeyeroast.jpg"),
+                    new Coffee(8, "Peets", "Costa Rica Peaberry", "Dark Roast from Americas. Notes of sun-ripened cherry fruit and intense, bright Meyer lemon citrus-acidity.", "/images/costaricapeaberry.jpg"),
+                    new Coffee(9, "Dunkin' Donuts", "Dunkin Decaf", "Medium Roast. Decaffinated Coffee that almost tastes like normal Coffee", "/images/dunkindecaf.jpg")
                             );
 
             modelBuilder.Entity<Review>().HasData(
